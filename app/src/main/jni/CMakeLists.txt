@@ -26,6 +26,7 @@ project(OPENXCOM CXX)
 #    OpenXcom/src/*.cpp)
 set(OPENXCOM_FILES_BASE
     OpenXcom/src/main.cpp
+    OpenXcom/libs/miniz/miniz.c
     OpenXcom/src/lodepng.cpp)
 
 file(GLOB OPENXCOM_FILES_BASESCAPE

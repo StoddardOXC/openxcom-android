@@ -18,6 +18,7 @@ include(deps_cmake/sdl.cmake)
 include(deps_cmake/sdl2_image.cmake)
 include(deps_cmake/sdl2_mixer.cmake)
 include(deps_cmake/sdl_gfx.cmake)
+include(deps_cmake/sdl_pnglite.cmake)
 include(deps_cmake/yaml-cpp.cmake)
 
 project(OPENXCOM CXX)
@@ -27,7 +28,7 @@ project(OPENXCOM CXX)
 set(OPENXCOM_FILES_BASE
     OpenXcom/src/main.cpp
     OpenXcom/libs/miniz/miniz.c
-    OpenXcom/src/lodepng.cpp)
+    )
 
 file(GLOB OPENXCOM_FILES_BASESCAPE
     OpenXcom/src/Basescape/*.cpp)
@@ -70,7 +71,6 @@ set(OPENXCOM_SOURCES
     ${OPENXCOM_FILES_MOD}
     ${OPENXCOM_FILES_SAVEGAME}
     ${OPENXCOM_FILES_UFOPAEDIA}
-    src/SDL_android_main.c
     )
 
 add_library(openxcom
@@ -81,6 +81,7 @@ add_library(openxcom
 find_library(EGL_LIB EGL)
 find_library(LOG_LIB log)
 find_library(GLESv2_LIB GLESv2)
+find_library(OpenSLES_LIB OpenSLES)
 find_library(ZLIB z)
 find_library(DLLIB dl)
 
@@ -89,10 +90,12 @@ target_link_libraries(openxcom
     SDL2_image
     SDL2_mixer
     SDL_gfx
+    SDL_pnglite
     YAML_CPP
     ${EGL_LIB}
     ${LOG_LIB}
     ${GLESv2_LIB}
+    ${OpenSLES_LIB}
     ${ZLIB}
     ${DLLIB}
     )

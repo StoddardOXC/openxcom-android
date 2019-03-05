@@ -13,11 +13,11 @@ Uses [afiledialog](https://github.com/jfmdev/afiledialog) library.
 
 In order to build OXCE for Android, you'll need:
 
- - A current Android SDK, and
- - A current Android NDK (tested with r14b).
+ - Android SDK 28
+ - Android NDK 19
 
 Additionally, you'll need Java development kit and Java runtime environment version 1.7 or higher
-(Oracle Java SE 7 or OpenJDK 7), which is required for building Android applications.
+(Oracle Java SE 8 or OpenJDK 8), which is required for building Android applications.
 
 ## Getting the Code
 
@@ -70,15 +70,3 @@ Since most of the code was not touched in SDL1.2 to SDL2 transition, most mods s
 This is a fork of sfalexrog's repository of OpenXcom for Android and most of the actual work has been done by him.
 
 I (Meridian) have only copied and customized his work on this build system.
-
-# Caveats (by sfalexrog)
-
-This project uses ndk-build system, which is marked as "deprecated" by Google (even though there's
-no alternative as of time of me writing this). Still, expect changes to the build system.
-
-I'm no expert in Gradle build system, so most of the code is not very good. Anyway, it seems to work,
-and I'm not touching it anytime soon.
-
-This project is basically my "hello world", and it started at the time when I didn't really know what
-Java was. Expect bad code and inefficient solutions. Better yet, send me a P/R to fix something :-)
-

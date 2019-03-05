@@ -16,13 +16,9 @@ def git = org.ajoberstar.grgit.Grgit.open(file('..'))
 ext.revision = git.head().getAbbreviatedId(7)
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 28
 
     externalNativeBuild {
-        /*ndkBuild {
-            path "src/main/jni/Android.mk"
-        }*/
         cmake {
             path "src/main/jni/CMakeLists.txt"
         }
@@ -31,14 +27,9 @@ android {
     defaultConfig {
         applicationId "org.libsdl.openxcom"
         minSdkVersion 10
-        targetSdkVersion 23
+        targetSdkVersion 28
 
         externalNativeBuild {
-            /*ndkBuild {
-                arguments "-j8", "NDK_APPLICATION_MK:=src/main/jni/Application.mk"
-                //abiFilters "armeabi", "armeabi-v7a", "x86", "x86_64", "arm64-v8a", "mips"
-                abiFilters "armeabi-v7a"
-            }*/
             cmake {
                 arguments "-DANDROID_STL=c++_static", "-DANDROID_ARM_MODE=arm", "-DOPENXCOM_VERSION_STRING=${project.revision}"
                 abiFilters "armeabi-v7a", "x86", "x86_64", "arm64-v8a"

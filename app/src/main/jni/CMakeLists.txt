@@ -78,6 +78,8 @@ add_library(openxcom
             ${OPENXCOM_SOURCES}
             )
 
+set_source_files_properties(OpenXcom/libs/miniz/miniz.c PROPERTIES COMPILE_FLAGS -DMINIZ_NO_STDIO)
+
 find_library(EGL_LIB EGL)
 find_library(LOG_LIB log)
 find_library(GLESv2_LIB GLESv2)

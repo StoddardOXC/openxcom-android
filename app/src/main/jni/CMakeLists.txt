@@ -11,7 +11,7 @@
 # You've been warned.
 
 # Android Studio seems to use this version
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.6.0)
 
 # Build prerequisites first (yeah, by including whole files)
 include(deps_cmake/sdl.cmake)
@@ -86,6 +86,9 @@ find_library(OpenSLES_LIB OpenSLES)
 find_library(ZLIB z)
 find_library(DLLIB dl)
 
+include(AndroidNdkModules)
+android_ndk_import_module_cpufeatures()
+
 target_link_libraries(openxcom
     SDL2
     SDL2_image
@@ -97,6 +100,7 @@ target_link_libraries(openxcom
     ${GLESv2_LIB}
     ${OpenSLES_LIB}
     ${ZLIB}
+    cpufeatures
     ${DLLIB}
     )
 

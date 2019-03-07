@@ -5,7 +5,7 @@
 # THIS FILE IS AS BAD AS IT GETS, IT ASSUMES IT'S INCLUDED
 # IN THE TOP-LEVEL PROJECT AS IS, DON'T DO THAT KIDS
 
-cmake_minimum_required(VERSION 3.4.0)
+cmake_minimum_required(VERSION 3.6.0)
 
 project(SDL2 C)
 
@@ -18,6 +18,7 @@ file(GLOB SDL_FILES_ATOMIC
 file(GLOB SDL_FILES_AUDIO
         SDL/src/audio/*.c
         SDL/src/audio/dummy/*.c
+		SDL/src/audio/openslES/*.c
         SDL/src/audio/android/*.c)
 
 file(GLOB SDL_FILES_CORE
@@ -40,6 +41,7 @@ file(GLOB SDL_FILES_FILESYSTEM
 
 file(GLOB SDL_FILES_HAPTIC
         SDL/src/haptic/*.c
+		SDL/src/haptic/android/*.c
         SDL/src/haptic/dummy/*.c)
 
 file(GLOB SDL_FILES_JOYSTICK
@@ -75,8 +77,18 @@ file(GLOB SDL_FILES_TIMER
 
 file(GLOB SDL_FILES_VIDEO
         SDL/src/video/*.c
+		SDL/src/video/yuv2rgb/*.c
         SDL/src/video/android/*.c)
 
+file(GLOB SDL_FILES_SENSORS
+		SDL/src/sensor/*.c
+		SDL/src/sensor/dummy/*.c
+		SDL/src/sensor/android/*.c)
+
+file(GLOB SDL_FILES_HIDAPI
+        SDL/src/hidapi/*.c
+		SDL/src/hidapi/android/hid.cpp
+		SDL/src/joystick/hidapi/*.c)
 
 set(SDL_SOURCES
     ${SDL_FILES_BASE}
@@ -98,6 +110,8 @@ set(SDL_SOURCES
     ${SDL_FILES_THREAD}
     ${SDL_FILES_TIMER}
     ${SDL_FILES_VIDEO}
+	${SDL_FILES_SENSORS}
+#	${SDL_FILES_HIDAPI}  requires .so, so no.
     )
 
 find_library(LOG_LIB log)
@@ -116,7 +130,9 @@ target_link_libraries(SDL2
         ${GLES2_LIB}
         ${ANDROID_LIB}
         ${DL_LIB}
-        )
+
+)
+include_directories(${ANDROID_NDK}/sources/android/cpufeatures)
 
 target_include_directories(SDL2 PUBLIC
         SDL/include)

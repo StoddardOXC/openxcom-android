@@ -1,4 +1,4 @@
-package org.libsdl.openxcom.config;
+package org.openxcom.extended.config;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -54,14 +54,14 @@ public class Config {
     /**
      * Keys for SharedPreferences queries.
      */
-    private static final String SP_DATA_PATH = "org.libsdl.openxcom.DATA_PATH";
-    private static final String SP_SAVE_PATH = "org.libsdl.openxcom.SAVE_PATH";
-    private static final String SP_CONF_PATH = "org.libsdl.openxcom.CONF_PATH";
-    private static final String SP_DATA_CACHE = "org.libsdl.openxcom.DATA_CACHE";
-    private static final String SP_SAVE_CACHE = "org.libsdl.openxcom.SAVE_CACHE";
-    private static final String SP_CONF_CACHE = "org.libsdl.openxcom.CONF_CACHE";
-    private static final String SP_UI_STYLE = "org.libsdl.openxcom.UI_STYLE";
-    private static final String SP_ASSET_VERSION_PREFIX = "org.libsdl.openxcom.ASSET_VERSIONS.";
+    private static final String SP_DATA_PATH = "org.openxcom.extended.DATA_PATH";
+    private static final String SP_SAVE_PATH = "org.openxcom.extended.SAVE_PATH";
+    private static final String SP_CONF_PATH = "org.openxcom.extended.CONF_PATH";
+    private static final String SP_DATA_CACHE = "org.openxcom.extended.DATA_CACHE";
+    private static final String SP_SAVE_CACHE = "org.openxcom.extended.SAVE_CACHE";
+    private static final String SP_CONF_CACHE = "org.openxcom.extended.CONF_CACHE";
+    private static final String SP_UI_STYLE = "org.openxcom.extended.UI_STYLE";
+    private static final String SP_ASSET_VERSION_PREFIX = "org.openxcom.extended.ASSET_VERSIONS.";
 
     /**
      * Legacy keys for SharedPreferences storage; should check those

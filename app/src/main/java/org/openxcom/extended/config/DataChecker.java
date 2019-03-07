@@ -1,4 +1,4 @@
-package org.libsdl.openxcom.config;
+package org.openxcom.extended.config;
 
 import java.util.Set;
 

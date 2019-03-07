@@ -70,7 +70,6 @@ set(OPENXCOM_SOURCES
     ${OPENXCOM_FILES_MOD}
     ${OPENXCOM_FILES_SAVEGAME}
     ${OPENXCOM_FILES_UFOPAEDIA}
-    src/SDL_android_main.c
     )
 
 add_library(openxcom
@@ -83,6 +82,7 @@ set_source_files_properties(OpenXcom/libs/miniz/miniz.c PROPERTIES COMPILE_FLAGS
 find_library(EGL_LIB EGL)
 find_library(LOG_LIB log)
 find_library(GLESv2_LIB GLESv2)
+find_library(OpenSLES_LIB OpenSLES)
 find_library(ZLIB z)
 find_library(DLLIB dl)
 
@@ -95,6 +95,7 @@ target_link_libraries(openxcom
     ${EGL_LIB}
     ${LOG_LIB}
     ${GLESv2_LIB}
+    ${OpenSLES_LIB}
     ${ZLIB}
     ${DLLIB}
     )

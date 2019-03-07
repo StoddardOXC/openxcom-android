@@ -38,7 +38,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import ar.com.daidalos.afiledialog.view.FileItem;
 
-import org.libsdl.openxcom.R;
+import org.openxcom.extended.R;
 
 /**
  * This class implements the common features of a file chooser.

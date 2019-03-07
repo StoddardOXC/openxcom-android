@@ -1,13 +1,13 @@
-package org.libsdl.openxcom;
+package org.openxcom.extended;
 
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Locale;
 
 import org.libsdl.app.SDLActivity;
-import org.libsdl.openxcom.UiVisibilityChanger;
-import org.libsdl.openxcom.config.Config;
-//import org.libsdl.openxcom.DirsConfigActivity;
+import org.openxcom.extended.UiVisibilityChanger;
+import org.openxcom.extended.config.Config;
+//import org.openxcom.extended.DirsConfigActivity;
 
 import android.app.Activity;
 import android.os.Build;

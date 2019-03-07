@@ -1,4 +1,4 @@
-package org.libsdl.openxcom.util;
+package org.openxcom.extended.util;
 
 import java.io.BufferedInputStream;
 import java.io.File;

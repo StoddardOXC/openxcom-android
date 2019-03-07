@@ -1,14 +1,14 @@
-package org.libsdl.openxcom;
+package org.openxcom.extended;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.libsdl.openxcom.config.Config;
-import org.libsdl.openxcom.config.DataCheckResult;
-import org.libsdl.openxcom.config.DataChecker;
-import org.libsdl.openxcom.config.Xcom1DataChecker;
-import org.libsdl.openxcom.config.Xcom2DataChecker;
-import org.libsdl.openxcom.util.FilesystemHelper;
+import org.openxcom.extended.config.Config;
+import org.openxcom.extended.config.DataCheckResult;
+import org.openxcom.extended.config.DataChecker;
+import org.openxcom.extended.config.Xcom1DataChecker;
+import org.openxcom.extended.config.Xcom2DataChecker;
+import org.openxcom.extended.util.FilesystemHelper;
 
 import android.app.Activity;
 import android.app.AlertDialog;

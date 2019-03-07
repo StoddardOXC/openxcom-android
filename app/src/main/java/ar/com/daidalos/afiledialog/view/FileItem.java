@@ -29,7 +29,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import org.libsdl.openxcom.R;
+import org.openxcom.extended.R;
 
 /**
  * This class is used to represents the files that can be selected by the user. 

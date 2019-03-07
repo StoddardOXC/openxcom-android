@@ -1,4 +1,4 @@
-package org.libsdl.openxcom.config;
+package org.openxcom.extended.config;
 
 /**
  * The result of checking data. This object contains flag of whether the game data

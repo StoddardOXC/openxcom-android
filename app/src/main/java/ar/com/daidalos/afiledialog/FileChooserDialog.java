@@ -23,7 +23,7 @@ import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.libsdl.openxcom.R;
+import org.openxcom.extended.R;
 
 import android.app.Dialog;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package org.libsdl.openxcom;
+package org.openxcom.extended;
 
 import java.util.Timer;
 import java.util.TimerTask;

@@ -1,4 +1,4 @@
-package org.libsdl.openxcom;
+package org.openxcom.extended;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,8 +23,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import org.libsdl.openxcom.config.Config;
-import org.libsdl.openxcom.util.FilesystemHelper;
+import org.openxcom.extended.config.Config;
+import org.openxcom.extended.util.FilesystemHelper;
 
 public class PreloaderActivity extends Activity {
 

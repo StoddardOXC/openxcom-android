@@ -28,7 +28,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
-import org.libsdl.openxcom.R;
+import org.openxcom.extended.R;
 
 /**
  * A file chooser implemented in an Activity. 

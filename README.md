@@ -4,9 +4,6 @@ OXCE for Android is, as the name suggests, a port of [OXCE](https://openxcom.org
 Android platform. In order to achieve this, it uses SDL2 set of libraries, and a portion of Java
 code for some convenient features like auto-updating files after installing new version.
 
-This project contains parts of the Boost library required to build yaml-cpp library.
-Note: The dependency on Boost will be removed later, as it is no longer necessary with newer versions of yaml-cpp.
-
 Uses [afiledialog](https://github.com/jfmdev/afiledialog) library.
 
 # Building
@@ -14,9 +11,11 @@ Uses [afiledialog](https://github.com/jfmdev/afiledialog) library.
 In order to build OXCE for Android, you'll need:
 
  - Android SDK 28
- - Android NDK 19
+ - Android NDK 18b
 
-Additionally, you'll need Java development kit and Java runtime environment version 1.7 or higher
+Note: NDK 19b doesn't work! The project compiles, but the game crashes.
+
+Additionally, you'll need Java development kit and Java runtime environment version 1.8 or higher
 (Oracle Java SE 8 or OpenJDK 8), which is required for building Android applications.
 
 ## Getting the Code
@@ -27,21 +26,25 @@ This project uses git submodules, so in order to get the code, you'll have to do
 
 
     $ git clone https://github.com/MeridianOXC/openxcom-android.git
+
     $ cd openxcom-android
+
     $ git checkout oxce-plus-proto
 
 2. Get submodules
 
 
     $ git submodule init
+
     $ git sibmodule update
 
-3. Since this project uses Android NDK (currently built with r14b), you'll need to provide path
+3. Since this project uses Android NDK (currently tested with r14b and r18b), you'll need to provide path
 to it. Additionally, you'll have to provide path to Android SDK as well. These paths should be in
 the local.properties file in the project root. The file should contain the following lines:
 
 
     sdk.dir=/path/to/Android/sdk
+
     ndk.dir=/path/to/Android/ndk
 
 with your own actual paths substituted instead of these placeholders.
@@ -61,12 +64,10 @@ automatically installed or even the game data that won't require to go through t
 process. Note that redistribution of such builds might be illegal in some countries, and as
 such they should be only used for debugging purposes.
 
-# Mod compatibility
-
-Since most of the code was not touched in SDL1.2 to SDL2 transition, most mods should work out-of-box.
-
 # Credits
 
 This is a fork of sfalexrog's repository of OpenXcom for Android and most of the actual work has been done by him.
 
 I (Meridian) have only copied and customized his work on this build system.
+
+Many thanks also to Stoddard for helping with all aspects of the project.
